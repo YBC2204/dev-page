@@ -13,13 +13,13 @@ const DevPage = () =>
                 <h className='text-2xl font-bela mt-4'>DEVELOPER X</h>
             </div>
             <div className="flex flex-col gap-4">
-              <div className="my-24">
-                <h1 className="text-4xl font-dms">ABOUT ME</h1>
-                <p className="p-3 text-lg">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the  standard dummy text ever since the 1500s, when an unknown printer took a galley of and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
+              <div className="mt-24 mb-12 sm:my-24">
+                <h1 className="text-3xl sm:text-4xl font-dms">ABOUT ME</h1>
+                <p className="px-3 pt-5 text-md sm:text-xl">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the  standard dummy text ever since the 1500s, when an unknown printer took a galley of and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
               </div>
-              <div className="my-12">
-                <h1 className="text-4xl font-dms mb-12">PROJECTS</h1>
-                <div className="flex gap-5 m-7">
+              <div className=" sm:my-12">
+                <h1 className="text-3xl  sm:text-4xl font-dms mb-12">PROJECTS</h1>
+                <div className="flex flex-col mx-16 sm:flex-row gap-5 ">
                     <div className="flex-1"><ProjectCard/></div>
                     <div className="flex-1"><ProjectCard/></div>
                     <div className="flex-1"><ProjectCard/></div>
@@ -27,7 +27,7 @@ const DevPage = () =>
               </div>
              <div className="my-12">
                 <h1 className="text-4xl font-dms">SKILL-SET</h1>
-                <div className="grid grid-cols-3 grid-row-2 text-center gap-6 my-8">
+                <div className="grid grid-cols-3 grid-row-2 text-center gap-6 mt-8">
                 <i className="devicon-html5-plain-wordmark" style={{ fontSize: '4rem' }}></i>
                 <i className="devicon-tailwindcss-original-wordmark" style={{ fontSize: '5rem' }}></i>
                 <i className="devicon-react-original colored" style={{ fontSize: '4rem' }}></i>
