@@ -1,10 +1,9 @@
-
 import Girl from '../assets/random girl.jpg'
-
 import ProjectCard from "./ProjectCard";
 
 const DevPage = () =>
 {
+  
     return(
         <div className='flex flex-col mx-4'>
             
@@ -52,3 +51,29 @@ const DevPage = () =>
 };
 
 export default DevPage;
+
+  // const [projList,setprojList] = useState(
+    //     [
+    //         {
+    //             id:0,
+    //             p_des:'Project 1 details',
+    //             link:'https://ybc2204.github.io/Simon-says/',
+    //             image:Man
+    //         },
+    //         {
+    //             id:1,
+    //             p_des:'Project 2 details',
+    //             link:'https://ybc2204.github.io/Simon-says/',
+    //             image:Proj2
+    //         },
+    //         {
+    //             id:2,
+    //             p_des:'Project 3 details',
+    //             link:'https://ybc2204.github.io/Simon-says/',
+    //             image:Proj3
+    //         },
+    //     ]
+    // );
+    // const renderCards = projList.map(val => (
+    //     <ProjectCard key={val.id} item={val}/>
+    // ));
