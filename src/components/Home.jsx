@@ -1,5 +1,5 @@
 import DevCard from "./DevCard";
-import Footer from "./Footer";
+
 
 const Home = () =>{
 
@@ -24,7 +24,7 @@ const Home = () =>{
              </div>
 
             </div>
-            <Footer/>
+            
         </div>
     )
 };

@@ -7,6 +7,7 @@ export default {
       fontFamily:{
         'bela':['Belanosima', 'sans-serif'],
         'bagel':['Bagel Fat One', 'cursive'],
+        'dms':['DM Serif Display', 'serif'],
       }
     },
   },

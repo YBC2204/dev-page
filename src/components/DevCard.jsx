@@ -1,4 +1,5 @@
 import Girl from '../assets/random girl.jpg'
+import {Link} from 'react-router-dom';
 const DevCard = () =>
 {
     return(
@@ -7,7 +8,7 @@ const DevCard = () =>
             <img src={Girl} className=' object-center h-full w-full ' alt='devimg'/>
         </div>
         <div className='h-12 bg-black rounded-b-xl text-white'>
-           <div className='text-center'>Developer X</div> 
+         <Link to='/devdetails'><div className='text-center hover:underline'>Developer X</div> </Link>  
            <div className='text-center'>Front-End</div>
         </div>
      </div>
