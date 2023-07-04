@@ -1,14 +1,15 @@
-import Header from "./Header";
+
 import Girl from '../assets/random girl.jpg'
+
 import ProjectCard from "./ProjectCard";
 
 const DevPage = () =>
 {
     return(
-        <div className="bg-gradient-to-br from-green-400 via-blue-600 to-transparent mt-24">
-            <Header/>
-            <div className="flex flex-col  h-64 items-center">
-                <img src={Girl} className="rounded-xl h-64 w-fit"/>
+        <div className='flex flex-col mx-4'>
+            
+            <div className="flex flex-col  h-64 items-center ">
+                <img src={Girl} className="rounded-xl h-64 w-fit mt-8"/>
                 <h className='text-2xl font-bela mt-4'>DEVELOPER X</h>
             </div>
             <div className="flex flex-col gap-4">
@@ -28,7 +29,7 @@ const DevPage = () =>
                 <h1 className="text-4xl font-dms">SKILL-SET</h1>
                 <div className="grid grid-cols-3 grid-row-2 text-center gap-6 my-8">
                 <i className="devicon-html5-plain-wordmark" style={{ fontSize: '4rem' }}></i>
-                <i className="devicon-tailwindcss-original-wordmark" style={{ fontSize: '4rem' }}></i>
+                <i className="devicon-tailwindcss-original-wordmark" style={{ fontSize: '5rem' }}></i>
                 <i className="devicon-react-original colored" style={{ fontSize: '4rem' }}></i>
                 <i className="devicon-java-plain-wordmark" style={{ fontSize: '4rem' }}></i>
                 <i className="devicon-javascript-plain" style={{ fontSize: '4rem' }}></i>

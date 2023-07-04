@@ -9,10 +9,11 @@ return (
   <div className='bg-gradient-to-br from-green-400 via-blue-600 to-transparent'>
   <BrowserRouter>
   <Header/>
-  <Home/>
   <Routes>
-   <Route path='/ggg' element={<Home/>} /> 
-   <Route path='/devdetails' element={<DevPage/>} /> 
+  
+   <Route path='/' element={<Home/>} /> 
+   <Route path='/devdetails' element={<DevPage/>} />
+    
   </Routes>
   <Footer/>
   </BrowserRouter>
