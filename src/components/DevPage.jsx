@@ -3,11 +3,21 @@ import ProjectCard from "./ProjectCard";
 
 const DevPage = ({items}) =>
 {
-  
+
   const {id} = useParams();
   const itemId = +id;
   
   const selectedItem = items.find(item => item.id === itemId);
+  console.log(selectedItem.role)
+  const skill = selectedItem.skills.map(item => (
+   
+   <p className="text-lg font-serif md:text-3xl xl:text-4xl">{item}</p>
+   
+  ));
+  
+let len=selectedItem.skills.length
+console.log(len)
+console.log(selectedItem.skills)
     return(
         <div className='flex flex-col mx-4'>
             
@@ -29,20 +39,15 @@ const DevPage = ({items}) =>
                 </div>
               </div>
              <div className="my-12">
-                <h1 className="text-4xl font-dms">SKILL-SET</h1>
+                <h1 className="text-3xl md:text-4xl font-dms">SKILL-SET</h1>
                 <div className="grid grid-cols-3 grid-row-2 text-center gap-6 mt-8">
-                <i className="devicon-html5-plain-wordmark" style={{ fontSize: '4rem' }}></i>
-                <i className="devicon-tailwindcss-original-wordmark" style={{ fontSize: '5rem' }}></i>
-                <i className="devicon-react-original colored" style={{ fontSize: '4rem' }}></i>
-                <i className="devicon-java-plain-wordmark" style={{ fontSize: '4rem' }}></i>
-                <i className="devicon-javascript-plain" style={{ fontSize: '4rem' }}></i>
-                <i className="devicon-typescript-plain" style={{ fontSize: '4rem' }}></i>
+                {skill}
                 </div>
              </div>
-            <div className="my-12">
-            <h1 className="text-4xl font-dms">CONTACT</h1>
-                <div className="flex flex-col items-center my-10 gap-4">
-                    <div className="text-xl font-bela">Email : developer111@gmail.com</div>
+            <div className="mb-12">
+            <h1 className="text-3xl md:text-4xl font-dms">CONTACT</h1>
+                <div className="flex flex-col items-center my-10 gap-5">
+                    <div className="text-xl font-bela md:text-2xl lg:text-3xl">{selectedItem.mail}</div>
                     <div ><a href="https://github.com/YBC2204"><i className="devicon-github-original colored" style={{ fontSize: '4rem' }}></i></a></div>
                     <div><i className="devicon-twitter-original" style={{ fontSize: '3rem' }}></i></div>
                     <div><a href="https://www.linkedin.com/in/yadhukrishnan-bc-a44004259/"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/linkedin/linkedin-plain.svg" className="h-12"/></a></div>
@@ -56,4 +61,9 @@ const DevPage = ({items}) =>
 
 export default DevPage;
 
-  
+  {/* <i className="devicon-html5-plain-wordmark" style={{ fontSize: '4rem' }}></i>
+                <i className="devicon-tailwindcss-original-wordmark" style={{ fontSize: '5rem' }}></i>
+                <i className="devicon-react-original colored" style={{ fontSize: '4rem' }}></i>
+                <i className="devicon-java-plain-wordmark" style={{ fontSize: '4rem' }}></i>
+                <i className="devicon-javascript-plain" style={{ fontSize: '4rem' }}></i>
+<i className="devicon-typescript-plain" style={{ fontSize: '4rem' }}></i> */}
