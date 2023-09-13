@@ -4,7 +4,11 @@ import {  BrowserRouter,  Routes, Route, }  from 'react-router-dom';
 import Header from './components/Header';
 import Home from './components/Home';
 import DevPage from './components/DevPage';
+import itemlist from './assets/developerlist.js'
+import { useState } from 'react';
 function App() {
+
+  const [items,setItems] = useState(itemlist)
 return (
   <div className='bg-gradient-to-br from-green-400 via-blue-600 to-transparent'>
   <BrowserRouter>
@@ -12,7 +16,7 @@ return (
   <Routes>
   
    <Route path='/' element={<Home/>} /> 
-   <Route path='/devdetails' element={<DevPage/>} />
+   <Route path='/devdetails/:id' element={<DevPage items={items}/>}/>
     
   </Routes>
   <Footer/>

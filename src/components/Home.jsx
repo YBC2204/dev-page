@@ -1,69 +1,8 @@
 import DevCard from "./DevCard";
-import Girl from '../assets/random girl.jpg'
-import Dude from '../assets/rondom man.jpg'
-import Guy from '../assets/dude2.jpg'
-import { useState } from "react";
+import imgList from "../assets/developerlist";
 
 const Home = () =>{
-    const [imgList,setImgList] = useState(
-        [
-            {
-                id:0,
-                name:'Developer X',
-                role:'Back-End',
-                image:Girl
-            },
-            {
-                id:1,
-                name:'Developer Y',
-                role:'Front-End',
-                image:Dude
-            },
-            {
-                id:2,
-                name:'Developer Z',
-                role:'Full-Stack',
-                image:Guy
-            },
-            {
-                id:3,
-                name:'Developer Z',
-                role:'Full-Stack',
-                image:Guy
-            },
-            {
-                id:4,
-                name:'Developer X',
-                role:'Back-End',
-                image:Girl
-            },
-            {
-                id:5,
-                name:'Developer Y',
-                role:'Front-End',
-                image:Dude
-            },
-            {
-                id:6,
-                name:'Developer Z',
-                role:'Full-Stack',
-                image:Guy
-            },
-            {
-                id:7,
-                name:'Developer Y',
-                role:'Front-End',
-                image:Dude
-            },
-            {
-                id:9,
-                name:'Developer X',
-                role:'Back-End',
-                image:Girl
-            },
-            
-        ]
-    );
+   
     const renderedCards = imgList.map(item => (
         <DevCard key={item.id} item={item}/>
     ));

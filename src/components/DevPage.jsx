@@ -1,20 +1,24 @@
-import Girl from '../assets/random girl.jpg'
+import { useParams } from "react-router-dom";
 import ProjectCard from "./ProjectCard";
 
-const DevPage = () =>
+const DevPage = ({items}) =>
 {
   
+  const {id} = useParams();
+  const itemId = +id;
+  
+  const selectedItem = items.find(item => item.id === itemId);
     return(
         <div className='flex flex-col mx-4'>
             
             <div className="flex flex-col  h-64 items-center ">
-                <img src={Girl} className="rounded-xl h-64 w-fit mt-8"/>
-                <h className='text-2xl font-bela mt-4'>DEVELOPER X</h>
+                <img src={selectedItem.image} className="rounded-xl h-64 w-52 mt-8"/>
+                <h className='text-2xl font-bela mt-4'>{selectedItem.name}</h>
             </div>
             <div className="flex flex-col gap-4">
               <div className="mt-24 mb-12 sm:my-24">
                 <h1 className="text-3xl sm:text-4xl font-dms">ABOUT ME</h1>
-                <p className="px-3 pt-5 text-md sm:text-xl">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the  standard dummy text ever since the 1500s, when an unknown printer took a galley of and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
+                <p className="px-3 pt-5 text-md sm:text-xl">{selectedItem.about}</p>
               </div>
               <div className=" sm:my-12">
                 <h1 className="text-3xl  sm:text-4xl font-dms mb-12">PROJECTS</h1>
@@ -52,28 +56,4 @@ const DevPage = () =>
 
 export default DevPage;
 
-  // const [projList,setprojList] = useState(
-    //     [
-    //         {
-    //             id:0,
-    //             p_des:'Project 1 details',
-    //             link:'https://ybc2204.github.io/Simon-says/',
-    //             image:Man
-    //         },
-    //         {
-    //             id:1,
-    //             p_des:'Project 2 details',
-    //             link:'https://ybc2204.github.io/Simon-says/',
-    //             image:Proj2
-    //         },
-    //         {
-    //             id:2,
-    //             p_des:'Project 3 details',
-    //             link:'https://ybc2204.github.io/Simon-says/',
-    //             image:Proj3
-    //         },
-    //     ]
-    // );
-    // const renderCards = projList.map(val => (
-    //     <ProjectCard key={val.id} item={val}/>
-    // ));
+  
