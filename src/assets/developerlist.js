@@ -1,12 +1,12 @@
-import Girl1 from '../assets/girl.jpg'
-import Girl2 from '../assets/girl2.jpg'
+import Girl1 from '../assets/girl-min.jpg'
+import Girl2 from '../assets/girl2-min.jpg'
 import Girl3 from '../assets/girl3.jpg'
-import Girl4 from '../assets/girl4.jpg'
-import Dude1 from '../assets/dude1.jpg'
-import Dude2 from '../assets/dude2.jpg'
-import Dude3 from '../assets/dude3.jpg'
-import Dude4 from '../assets/dude4.jpg'
-import Dude5 from '../assets/dude5.jpg'
+import Girl4 from '../assets/girl4-min.jpg'
+import Dude1 from '../assets/dude1-min.jpg'
+import Dude2 from '../assets/dude2-min.jpg'
+import Dude3 from '../assets/dude3-min.jpg'
+import Dude4 from '../assets/dude4-min.jpg'
+import Dude5 from '../assets/dude5-min.jpg'
 
 
 
