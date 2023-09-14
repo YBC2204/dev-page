@@ -15,7 +15,7 @@ const Home = () =>{
                 <div className="mt-10 text-xl sm:text-3xl font-bela text-teal-200">Hire top developers in the world. We provide great oppurtunities for your website development.</div>
             </div>
             <div className="flex justify-center">
-             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3  gap-10  xl:mx-48 mx-12 h-min">
+             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3  gap-10  xl:mx-48  h-min">
                  
              {renderedCards}
              </div>
