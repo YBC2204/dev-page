@@ -1,19 +1,32 @@
 import './App.css'
 import Footer from "./components/Footer";
-import {  BrowserRouter,  Routes, Route, }  from 'react-router-dom';
+import {  BrowserRouter,  Routes, Route, useLocation, }  from 'react-router-dom';
 import Header from './components/Header';
 import Home from './components/Home';
 import DevPage from './components/DevPage';
 import itemlist from './assets/developerlist.js'
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import { Sidebar } from "primereact/sidebar";
 import {Link} from 'react-router-dom';
+
+
+function ScrollToTop() {
+  const loc = useLocation();
+
+  useEffect(() => {
+    window.scrollTo(0, 0); // Scrolls to the top of the page on route change
+  }, [loc.pathname]);
+
+  return null;
+}
+
 function App() {
   const [visible , setVisible]=useState(false);
   const [items,setItems] = useState(itemlist);
 return (
   <div className='bg-gradient-to-br from-green-400 via-blue-600 to-transparent'>
   <BrowserRouter>
+  <ScrollToTop/>
   <Header setVisible={setVisible}/>
   <Sidebar
   visible={visible}
@@ -32,6 +45,7 @@ return (
     
   </Routes>
   <Footer/>
+  
   </BrowserRouter>
   </div>
   );

@@ -3,12 +3,11 @@ import ProjectCard from "./ProjectCard";
 
 const DevPage = ({items}) =>
 {
-
   const {id} = useParams();
   const itemId = +id;
   
   const selectedItem = items.find(item => item.id === itemId);
-  console.log(selectedItem.role)
+  
   const skill = selectedItem.skills.map(item => (
    
    <p className="text-lg font-serif md:text-3xl xl:text-4xl">{item}</p>
@@ -16,9 +15,8 @@ const DevPage = ({items}) =>
   ));
   
 let len=selectedItem.skills.length
-console.log(len)
-console.log(selectedItem.skills)
-    return(
+
+  return(
         <div className='flex flex-col mx-4'>
             
             <div className="flex flex-col  h-64 items-center ">

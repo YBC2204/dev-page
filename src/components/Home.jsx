@@ -6,7 +6,9 @@ const Home = () =>{
     const renderedCards = imgList.map(item => (
         <DevCard key={item.id} item={item}/>
     ));
+   
     return(
+        
         <div className="flex-auto px-14">
             <div className="flex flex-col sm:mt-7 mb-24">
                 <div className="text-black text-3xl sm:text-4xl lg:text-6xl xl:text-7xl m-auto font-bagel underline w-full sm:text-6xl ">FIND CREATIVE DEVELOPERS</div>
